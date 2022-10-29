@@ -1,4 +1,6 @@
 body{
+    display: flex;
+    flex-direction: column;
     font-family: Lora;
     background: #FBF7F3;
     margin: 0;
@@ -27,6 +29,10 @@ body{
     font-size: 18pt;
     font-weight: 400;
 }
+.miniFont{ /*миниатюрный шрифт*/
+    font-size: 14pt;
+    font-weight: 400;
+}
 
 .color5A4D3A{
     color: #5A4D3A;
@@ -40,6 +46,9 @@ body{
 .colorFBF7F3{
     color: #FBF7F3;
 }
+.colorFFFFFF{
+    color: #FFFFFF;
+}
 
 .bgWhite{
     background: #FFFFFF;
@@ -47,10 +56,12 @@ body{
 
 .nameOfSection{
     display: flex;
-    width: 100%;
+    width: 80%;
     margin: 0;
     padding: 0;
     margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
     justify-content: center;
 }
 
@@ -68,7 +79,7 @@ header{
     margin: 0;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 80%;
     justify-content: center;
 }
@@ -84,7 +95,6 @@ a{
 }
 
 ul{
-    hight: 45px;
     width: 100%;
     padding: 0;
 
@@ -105,7 +115,7 @@ li p{
                                         /*mainStr*/
 
 .mainStr{
-    background-image: url('images/bg1.jpg');
+    background-image: url('images/bg1.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -123,7 +133,7 @@ li p{
     width: 90%;
     margin: 5%;
     padding: 20px;
-    border: 3px solid #D3B288;
+    border: 2px double #D3B288;
     justify-content: center;
     flex-direction: column;
 }
@@ -140,8 +150,8 @@ li p{
     margin-left: 10%;
     margin-right: 10%;
     padding: 0;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 80%;
     flex-direction: row;
     align-items: center;
@@ -173,35 +183,6 @@ li p{
     margin-top: 20px;
 }
 
-
-.tableServices{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border: 2px solid #5A4D3A;
-}
-
-.rowOfTable{
-    display: flex;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.columnOfTable{
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-.leftColumn{
-    width: 80%;
-}
-.rightColumn{
-    width: 20%;
-}
-
-
                                         /*Техника*/
 
 .equipment{
@@ -222,45 +203,319 @@ li p{
     padding: 20px;
     width: 50%;
     flex-direction: column;
+    border: 2px double #D3B288;
 }
 
                                         /*Заявка*/
 
 .request{
     flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.forForm{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
 }
 
-.wrapperForm {
+                                        /*форма*/
+.applicationInf{
     display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0;
+    padding: 50px;
+    border-radius: 20px;
+    border: 4px double #D3B288;
+}
+
+
+input {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #D3B288;
+}
+#send{
+    width: auto;
+    padding: 10px;
+    background: #D3B288;
+}
+
+.formText{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 30px;
+}
+#textButton{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.attention{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+                                        /*адрес*/
+
+.address{
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 50px;
+    border-top: 2px double #D3B288;
+    border-bottom: 2px double #D3B288;
+}
+.addressText{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    margin-top: 50px;
+}
+.map{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    border: 2px double #D3B288;
+}
+
+                                        /*footer*/
+footer{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    /*padding-bottom: 30px;*/
+    width: 90%;
+    justify-content: space-between;
     align-items: center;
-    row-gap: 20px;
 }
-.headingForm {
-    width: fit-content;
-    font-size: 22px;
-    text-align: center;
-}
-form.formFeedBack {
-    width: 500px;
+.footerInf{
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    width: 20%;
 }
-.formFeedBack .textField {
-    padding: 7px 10px;
-    line-height: 1;
+.contact{
+    margin: 0;
+    padding: 5px;
 }
-.formFeedBack .butSubmitForm {
-    width: fit-content;
-    margin: auto;
-    padding: 5px 25px;
-    font-size: 14px;
+.photoFooter{
+    width: 20%;
 }
-.messageBlockForm {
-    display: none;
+
+
+/*даптивка под телефон */
+@media (max-width: 960px){
+
+    .boldFont{ /*большой жирный шрифт*/
+        font-size: 22pt;
+    }
+    .mediumFont{ /*средний шрифт*/
+        font-size: 18pt;
+    }
+    .normalFont{ /*классический шрифт*/
+        font-size: 14pt;
+    }
+    .miniFont{ /*миниатюрный шрифт*/
+        font-size: 10pt;
+    }
+
+    .nameOfSection{
+        margin-top: 30px;
+    }
+
+    .mobileDisplayNone{
+        display: none;
+    }
+
+                                        /*header*/
+
+                                        /*mainStr*/
+    .mainContent{
+        display: flex;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background: #FBF7F3;
+    }
+
+    .textMainStr{
+        display: flex;
+        width: 90%;
+        margin: 5%;
+        padding: 20px;
+        border: 2px double #D3B288;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+                                        /*услуги*/
+    .services{
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .rowService{
+        display: flex;
+        margin: 0;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 94%;
+        flex-direction: column;
+        border-left: none;
+        border-right: none;
+    }
+    .borderBottom{
+        border-bottom: 2px double #D3B288;
+    }
+    .nameOfService{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .priceOfService{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .forNameOfService{
+        margin-top: 5px;
+    }
+
+                                        /*Техника*/
+    .equipment{
+        flex-direction: column;
+    }
+    .rowEquipment{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-left: 3%;
+        margin-right: 3%;
+        width: 94%;
+        flex-direction: column;
+    }
+    .blockEquipment{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+                                        /*Заявка*/
+
+    .request{
+        padding-bottom: 30px;
+    }
+
+                                        /*форма*/
+    .applicationInf{
+        width: 75%;
+        padding: 30px;
+    }
+
+
+                                        /*адрес*/
+
+    .address{
+        padding-bottom: 30px;
+    }
+    .addressText{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        margin-top: 0;
+    }
+    .map{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+                                        /*footer*/
+    footer{
+        justify-content: space-between;
+    }
+    .footerInf{
+        width: 40%;
+    }
+    .photoFooter{
+        width: 40%;
+    }
+
 }
-.messageBlockForm.active {
-    display: block;
+
+/*даптивка под планшет */
+@media (max-width: 1200px){
+    .boldFont{ /*большой жирный шрифт*/
+        font-size: 26pt;
+        font-weight: 700;
+    }
+    .mediumFont{ /*средний шрифт*/
+        font-size: 20pt;
+        font-weight: 600;
+    }
+    .normalFont{ /*классический шрифт*/
+        font-size: 16pt;
+        font-weight: 400;
+    }
+    .miniFont{ /*миниатюрный шрифт*/
+        font-size: 12pt;
+        font-weight: 400;
+    }
+
+    .nameOfSection{
+        margin-top: 40px;
+    }
+
+
+                                        /*header*/
+
+                                        /*mainStr*/
+
+    .mainContent{
+        width: 60%;
+        margin-left: 10%;
+        margin-right: 30%;
+    }
+
+
+                                        /*услуги*/
+    .services{
+        margin-bottom: 50px;
+    }
+    .forNameOfService{
+        margin-top: 10px;
+    }
+
+
+                                        /*Техника - без изменений*/
+
+                                        /*Заявка - без изменений*/
+
+                                        /*форма*/
+    .applicationInf{
+        width: 50%;
+    }
+                                        /*адрес - без изменений*/
+
+                                        /*footer - без изменений*/
+
 }
